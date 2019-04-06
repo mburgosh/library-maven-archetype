@@ -8,6 +8,7 @@ After running all the tests artifacts will be published into this repository, bu
 
 The Archetype will do little more than take care of configuration, setting up the POM and the Maven project is most of its job, and so it will include few files not related to this. Some useful things such as a readme, a gitignore and a license files are included, but the initial code will consists just of a few placeholder classes.
 
+[![Build Status](https://travis-ci.org/mburgosh/library-maven-archetype.svg?branch=master)](https://travis-ci.org/mburgosh/library-maven-archetype)
 [![Maven Central](https://img.shields.io/maven-central/v/com.mburgosh.maven.archetypes/library-archetype.svg)][maven-repo]
 [![Bintray](https://api.bintray.com/packages/mburgosh/maven/library-maven-archetype/images/download.svg)][bintray-repo]
 
@@ -131,7 +132,7 @@ The project has been released under the [MIT License][license].
 [license]: http://www.opensource.org/licenses/mit-license.php
 [scm]: http://github.com/mburgosh/library-maven-archetype
 [site-develop]: http://docs.mburgosh.com/library-maven-archetype/head
-[site-release]: http://docs.bernardomg.com/library-maven-archetype
+[site-release]: http://docs.mburgosh.com/library-maven-archetype
 
 [maven-archetype]: https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
 [archetype-testing]: http://maven.apache.org/archetype/maven-archetype-plugin/integration-test-mojo.html
