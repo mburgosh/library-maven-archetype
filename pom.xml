@@ -22,15 +22,15 @@
    <!-- **************** PROJECT INFO **************** -->
    <!-- ********************************************** -->
 
-   <groupId>com.bernardomg.maven.archetypes</groupId>
+   <groupId>com.burgosh.maven.archetypes</groupId>
    <artifactId>library-archetype</artifactId>
-   <version>1.2.3</version>
+   <version>1.0.0</version>
    <packaging>maven-archetype</packaging>
 
    <name>Library Maven Archetype</name>
    <description>A Maven Archetype to ease the creation of new Java libraries.</description>
-   <url>https://www.github.com/bernardo-mg/library-maven-archetype</url>
-   <inceptionYear>2015</inceptionYear>
+   <url>https://www.github.com/mburgosh/library-maven-archetype</url>
+   <inceptionYear>2019</inceptionYear>
 
    <licenses>
       <license>
@@ -45,20 +45,20 @@
    <!-- ********************************************** -->
 
    <scm>
-      <connection>scm:git:https://github.com/bernardo-mg/library-maven-archetype.git</connection>
-      <developerConnection>scm:git:https://github.com/bernardo-mg/library-maven-archetype.git</developerConnection>
+      <connection>scm:git:https://github.com/mburgosh/library-maven-archetype.git</connection>
+      <developerConnection>scm:git:https://github.com/mburgosh/library-maven-archetype.git</developerConnection>
       <tag>head</tag>
-      <url>https://github.com/bernardo-mg/library-maven-archetype</url>
+      <url>https://github.com/mburgosh/library-maven-archetype</url>
    </scm>
 
    <issueManagement>
       <system>GitHub</system>
-      <url>https://github.com/bernardo-mg/library-maven-archetype/issues</url>
+      <url>https://github.com/mburgosh/library-maven-archetype/issues</url>
    </issueManagement>
 
    <ciManagement>
       <system>Travis CI</system>
-      <url>https://travis-ci.org/Bernardo-MG/library-maven-archetype</url>
+      <url>https://travis-ci.org/mburgosh/library-maven-archetype</url>
       <notifiers />
    </ciManagement>
 
@@ -67,7 +67,7 @@
          <uniqueVersion>false</uniqueVersion>
          <id>releases</id>
          <name>Releases Repository</name>
-         <url>https://api.bintray.com/maven/bernardo-mg/maven/library-maven-archetype</url>
+         <url>https://api.bintray.com/maven/mburgosh/maven/library-maven-archetype</url>
       </repository>
       <snapshotRepository>
          <uniqueVersion>false</uniqueVersion>
@@ -128,22 +128,22 @@
    <!-- ********************************************** -->
 
    <organization>
-      <name>Bernardo Martínez Garrido</name>
-      <url>https://github.com/Bernardo-MG</url>
+      <name>Mauricio Burgos Herrera</name>
+      <url>https://github.com/mburgosh</url>
    </organization>
 
    <developers>
       <developer>
-         <id>bmg</id>
-         <name>Bernardo Martínez Garrido</name>
-         <email>programming@bernardomg.com</email>
-         <url>https://github.com/Bernardo-MG</url>
-         <organization>Bernardo Martínez Garrido</organization>
-         <organizationUrl>https://github.com/Bernardo-MG</organizationUrl>
+         <id>mburgosh</id>
+         <name>Mauricio Burgos Herrera</name>
+         <email>m@burgosh.com</email>
+         <url>https://github.com/mburgosh</url>
+         <organization>Mauricio Burgos Herrera</organization>
+         <organizationUrl>https://github.com/mburgosh</organizationUrl>
          <roles>
             <role>Developer</role>
          </roles>
-         <timezone>+1</timezone>
+         <timezone>CET</timezone>
          <properties />
       </developer>
    </developers>
@@ -156,14 +156,14 @@
       <!-- ============================================== -->
       <!-- =============== MANIFEST DATA ================ -->
       <!-- ============================================== -->
-      <manifest.name>com/bernardomg/archetype/library</manifest.name>
+      <manifest.name>com/burgosh/archetype/library</manifest.name>
       <!-- ============================================== -->
       <!-- ================= MAVEN SITE ================= -->
       <!-- ============================================== -->
       <site.skin.version>1.4.1</site.skin.version>
-      <repoDownloadURL>https://dl.bintray.com/bernardo-mg/maven/</repoDownloadURL>
-      <bintrayURL>https://bintray.com/bernardo-mg/maven/library-maven-archetype/view</bintrayURL>
-      <mavenURL>http://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype</mavenURL>
+      <repoDownloadURL>https://dl.bintray.com/mburgosh/maven/</repoDownloadURL>
+      <bintrayURL>https://bintray.com/mburgosh/maven/library-maven-archetype/view</bintrayURL>
+      <mavenURL>http://mvnrepository.com/artifact/com.mburgosh.maven.archetypes/library-archetype</mavenURL>
    </properties>
 
    <!-- ********************************************** -->
