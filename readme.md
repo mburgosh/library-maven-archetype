@@ -8,8 +8,8 @@ After running all the tests artifacts will be published into this repository, bu
 
 The Archetype will do little more than take care of configuration, setting up the POM and the Maven project is most of its job, and so it will include few files not related to this. Some useful things such as a readme, a gitignore and a license files are included, but the initial code will consists just of a few placeholder classes.
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.bernardomg.maven.archetypes/library-archetype.svg)][maven-repo]
-[![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/library-maven-archetype/images/download.svg)][bintray-repo]
+[![Maven Central](https://img.shields.io/maven-central/v/com.mburgosh.maven.archetypes/library-archetype.svg)][maven-repo]
+[![Bintray](https://api.bintray.com/packages/mburgosh/maven/library-maven-archetype/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
@@ -77,13 +77,13 @@ The Maven coordinates and URL for it are:
 Group ID: com.bernardomg.maven.archetypes
 Artifact ID: library-archetype
 Version: (Check POM or badges)
-URL: https://dl.bintray.com/bernardo-mg/maven/
+URL: https://dl.bintray.com/mburgosh/maven/
 ```
 
 For example, to use it through command line type the following:
 
 ```
-$ mvn archetype:generate -DarchetypeGroupId=com.bernardomg.maven.archetypes -DarchetypeArtifactId=library-archetype -DarchetypeVersion=1.0.0 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
+$ mvn archetype:generate -DarchetypeGroupId=com.mburgosh.maven.archetypes -DarchetypeArtifactId=library-archetype -DarchetypeVersion=${project.version} -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
 ```
 
 If using an IDE check its documentation to find out how to use Maven Archetypes, and how to add these to the local repository.
@@ -124,14 +124,14 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 ## License
 The project has been released under the [MIT License][license].
 
-[bintray-repo]: https://bintray.com/bernardo-mg/maven/library-maven-archetype/view
-[maven-repo]: http://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/library-archetype
+[bintray-repo]: https://bintray.com/mburgosh/maven/library-maven-archetype/view
+[maven-repo]: http://mvnrepository.com/artifact/com.mburgosh.maven.archetypes/library-archetype
 [junit]: http://junit.org
-[issues]: https://github.com/Bernardo-MG/library-maven-archetype/issues
+[issues]: https://github.com/mburgosh/library-maven-archetype/issues
 [license]: http://www.opensource.org/licenses/mit-license.php
-[scm]: http://github.com/Bernardo-MG/library-maven-archetype
-[site-develop]: http://docs.bernardomg.com/development/maven/library-maven-archetype
-[site-release]: http://docs.bernardomg.com/maven/library-maven-archetype
+[scm]: http://github.com/mburgosh/library-maven-archetype
+[site-develop]: http://docs.mburgosh.com/library-maven-archetype/head
+[site-release]: http://docs.bernardomg.com/library-maven-archetype
 
 [maven-archetype]: https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
 [archetype-testing]: http://maven.apache.org/archetype/maven-archetype-plugin/integration-test-mojo.html
