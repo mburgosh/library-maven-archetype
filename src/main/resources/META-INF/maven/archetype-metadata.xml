@@ -1,72 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor
-   xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-   xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library-archetype">
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd
+http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 "
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="library-archetype">
    <requiredProperties>
       <requiredProperty key="projectName">
-         <defaultValue>Basic Maven Project</defaultValue>
       </requiredProperty>
+      <requiredProperty key="projectJavaName">
+<!--         <validationRegex>^[A-Za-z]*$</validationRegex>-->
+      </requiredProperty>
+      <requiredProperty key="projectMavenName">
+<!--         <validationRegex>^[a-z]*$</validationRegex>-->
+      </requiredProperty>
+
+      <requiredProperty key="groupId">
+         <defaultValue>com.burgosh.${projectMavenName}</defaultValue>
+      </requiredProperty>
+      <requiredProperty key="package">
+         <defaultValue>${groupId}.${projectMavenName}</defaultValue>
+      </requiredProperty>
+      <requiredProperty key="artifactId">
+         <defaultValue>${projectMavenName}</defaultValue>
+      </requiredProperty>
+
       <requiredProperty key="projectDescription">
-         <defaultValue>A Maven project created from the library archetype.</defaultValue>
+         <defaultValue>${projectName} description.</defaultValue>
       </requiredProperty>
       <requiredProperty key="currentYear">
          <defaultValue>2019</defaultValue>
       </requiredProperty>
       <requiredProperty key="developerId">
-         <defaultValue>bmg</defaultValue>
+         <defaultValue>mburgosh</defaultValue>
       </requiredProperty>
       <requiredProperty key="developerName">
-         <defaultValue>Bernardo Martínez Garrido</defaultValue>
+         <defaultValue>Mauricio Burgos Herrera</defaultValue>
       </requiredProperty>
       <requiredProperty key="developerMail">
-         <defaultValue>programming@bernardomg.com</defaultValue>
+         <defaultValue>m@burgposh.com</defaultValue>
       </requiredProperty>
       <requiredProperty key="developerUrl">
-         <defaultValue>https://github.com/Bernardo-MG</defaultValue>
+         <defaultValue>https://github.com/mburgosh</defaultValue>
       </requiredProperty>
       <requiredProperty key="repoUserId">
-         <defaultValue>bernardo-mg</defaultValue>
+         <defaultValue>mburgosh</defaultValue>
       </requiredProperty>
       <requiredProperty key="urlSiteDevelop">
-         <defaultValue>https://</defaultValue>
+         <defaultValue>https://docs.burgosh.com/${projectMavenName}/latest</defaultValue>
       </requiredProperty>
       <requiredProperty key="urlSiteRelease">
-         <defaultValue>https://</defaultValue>
+         <defaultValue>https://docs.burgosh.com/${projectMavenName}</defaultValue>
       </requiredProperty>
    </requiredProperties>
+   <modules>
+      <module id="${rootArtifactId}" dir="__rootArtifactId__" name="${rootArtifactId}">
+         <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+               <!-- Sources -->
+               <directory>src/main/java</directory>
+               <includes>
+                  <include>**/*.java</include>
+               </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+               <!-- Resources -->
+               <directory>src/main/resources</directory>
+               <includes>
+                  <include>**/*.*</include>
+               </includes>
+            </fileSet>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+               <!-- Test sources -->
+               <directory>src/test/java</directory>
+               <includes>
+                  <include>**/*.java</include>
+               </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+               <!-- Test resources -->
+               <directory>src/test/resources</directory>
+               <includes>
+                  <include>**/*.*</include>
+               </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+               <!-- Filtered root files -->
+               <directory/>
+               <includes>
+                  <include>pom.xml</include>
+                  <include>readme.md</include>
+               </includes>
+            </fileSet>
+            <fileSet encoding="UTF-8">
+               <!-- Root files -->
+               <directory/>
+               <includes>
+                  <include>.gitattributes</include>
+                  <include>.gitignore</include>
+                  <include>.travis.yml</include>
+               </includes>
+            </fileSet>
+         </fileSets>
+      </module>
+   </modules>
    <fileSets>
-      <fileSet filtered="true" packaged="true" encoding="UTF-8">
-         <!-- Sources -->
-         <directory>src/main/java</directory>
-         <includes>
-            <include>**/*.java</include>
-         </includes>
-      </fileSet>
-      <fileSet filtered="true" encoding="UTF-8">
-         <!-- Resources -->
-         <directory>src/main/resources</directory>
-         <includes>
-            <include>**/*.*</include>
-         </includes>
-      </fileSet>
-      <fileSet filtered="true" packaged="true" encoding="UTF-8">
-         <!-- Test sources -->
-         <directory>src/test/java</directory>
-         <includes>
-            <include>**/*.java</include>
-         </includes>
-      </fileSet>
-      <fileSet filtered="true" encoding="UTF-8">
-         <!-- Test resources -->
-         <directory>src/test/resources</directory>
-         <includes>
-            <include>**/*.*</include>
-         </includes>
-      </fileSet>
+
       <fileSet filtered="true" encoding="UTF-8">
          <!-- Filtered root files -->
-         <directory></directory>
+         <directory/>
          <includes>
             <include>pom.xml</include>
             <include>readme.md</include>
@@ -74,7 +115,7 @@
       </fileSet>
       <fileSet encoding="UTF-8">
          <!-- Root files -->
-         <directory></directory>
+         <directory/>
          <includes>
             <include>.gitattributes</include>
             <include>.gitignore</include>
@@ -83,35 +124,35 @@
       </fileSet>
       <fileSet filtered="true" encoding="UTF-8">
          <!-- Root files -->
-         <directory></directory>
+         <directory/>
          <includes>
             <include>LICENSE</include>
          </includes>
       </fileSet>
       <fileSet filtered="true" encoding="UTF-8">
          <!-- Filtered report config files -->
-         <directory>src</directory>
+         <directory/>
          <includes>
             <include>changes/*.xml</include>
          </includes>
       </fileSet>
       <fileSet encoding="UTF-8">
          <!-- Config files -->
-         <directory>src</directory>
+         <directory/>
          <includes>
             <include>config/**/*.xml</include>
          </includes>
       </fileSet>
       <fileSet filtered="true" encoding="UTF-8">
          <!-- Site config file -->
-         <directory>src/site</directory>
+         <directory>site</directory>
          <includes>
             <include>site.xml</include>
          </includes>
       </fileSet>
       <fileSet encoding="UTF-8">
          <!-- Site files -->
-         <directory>src/site</directory>
+         <directory>site</directory>
          <includes>
             <include>**/markdown/*.*</include>
          </includes>

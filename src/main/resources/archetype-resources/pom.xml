@@ -19,9 +19,9 @@
    <!-- ********************************************** -->
 
    <groupId>${groupId}</groupId>
-   <artifactId>${artifactId}</artifactId>
+   <artifactId>${artifactId}-parent</artifactId>
    <version>${version}</version>
-   <packaging>jar</packaging>
+   <packaging>pom</packaging>
 
    <name>${projectName}</name>
    <description>${projectDescription}</description>
@@ -221,12 +221,6 @@
    <!-- ********************************************** -->
 
    <dependencies>
-      <dependency>
-         <!-- Guava -->
-         <groupId>com.google.guava</groupId>
-         <artifactId>guava</artifactId>
-         <version>${guava.version}</version>
-      </dependency>
       <!-- ============================================== -->
       <!-- ================== LOGGERS =================== -->
       <!-- ============================================== -->
